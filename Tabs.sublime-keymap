@@ -1,4 +1,24 @@
 [
+  { "keys": ["escape"],
+    "command": "alternative_autocomplete",
+    "context": [
+      { "key": "num_selections", "operator": "equal", "operand": 1 },
+      { "key": "preceding_text", "operator": "regex_contains", "operand": "[a-zA-Z0-9_]$"}
+    ]
+  },
+  {
+    "keys": ["shift+escape"],
+    "command": "alternative_autocomplete",
+    "args": {"cycle": "previous"},
+    "context": [
+      { "key": "num_selections", "operator": "equal", "operand": 1 },
+      { "key": "preceding_text", "operator": "regex_contains", "operand": "[a-zA-Z0-9_]$"}
+    ]
+  }
+]
+
+/*
+[
   { 
     "keys": ["tab"],
     "command": "alternative_autocomplete",
@@ -30,3 +50,4 @@
     ]
   }
 ]
+*/
